@@ -42,16 +42,15 @@ sub getContent()
 	for each line in reLineSplit.Split (text)
 		if inExtinf
 			maPath = rePath.Match (line)
-			if maPath.Count () = 2
+			REM if maPath.Count () = 2
 				item = group.CreateChild("ContentNode")
 				item.url = maPath [1]
 				item.title = title
 
-				item.HDLISTITEMICONURL = icon
-				item.HDLISTITEMICONSELECTEDURL = icon
-
+			    item.HDLISTITEMICONURL = icon
+				REM item.HDLISTITEMICONSELECTEDURL = icon
 				inExtinf = False
-			end if
+			REM end if
 		end if
 		maExtinf = reExtinf.Match (line)
 		if maExtinf.Count () = 3
