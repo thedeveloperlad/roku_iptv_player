@@ -150,7 +150,7 @@ sub onKeyPress()
        m.top.dialog.close = true
        m.get_channel_list.control = "RUN"
     else if m.top.dialog.buttonSelected = 7 ' Extra channels DEMO
-        m.global.feedurl = "https://raw.githubusercontent.com/thedeveloperlad/links_channels/refs/heads/main/backup_channels_latino.m3u8"
+        m.global.feedurl = "https://raw.githubusercontent.com/thedeveloperlad/links_channels/refs/heads/main/extra_channels_2_bk.m3u8"
        m.save_feed_url.control = "RUN"
        m.top.dialog.close = true
        m.get_channel_list.control = "RUN"
