@@ -78,7 +78,7 @@ sub setChannel()
 	'Probably would be good to make content = content.clone(true) but for now it works like this
 	'content.streamFormat = "hls"
     content = content.clone(true)
-    
+
 	if m.video.content <> invalid and m.video.content.url = content.url return
 
 	content.HttpSendClientCertificates = true
@@ -103,7 +103,7 @@ sub showdialog()
     keyboarddialog.backgroundUri = "pkg:/images/rsgde_bg_hd.jpg"
     keyboarddialog.title = "Enter .m3u URL"
 
-    keyboarddialog.buttons=["OK","Set back to Demo", "Save", "MoveOnJoy US Channels", "Latino Canales", "Sports Channels", "Extra channels latino/ingles","Baseball",  "Extra channels DEMO"]
+    keyboarddialog.buttons=["OK","Set back to Demo", "Save", "MoveOnJoy US Channels", "Latino Canales", "Sports Channels", "Peliculas en Audio Latino","Extra channels DEMO"]
     keyboarddialog.optionsDialog=true
 
     m.top.dialog = keyboarddialog
@@ -144,18 +144,13 @@ sub onKeyPress()
        m.save_feed_url.control = "RUN"
        m.top.dialog.close = true
        m.get_channel_list.control = "RUN"
-    else if m.top.dialog.buttonSelected = 6 ' Extra channels latino/ingles
+    else if m.top.dialog.buttonSelected = 6 ' Peliculas en Audio Latino
         m.global.feedurl = "https://raw.githubusercontent.com/thedeveloperlad/links_channels/refs/heads/main/extra_channels.m3u8"
        m.save_feed_url.control = "RUN"
        m.top.dialog.close = true
        m.get_channel_list.control = "RUN"
-    else if m.top.dialog.buttonSelected = 7 ' Baseball
-        m.global.feedurl = "https://raw.githubusercontent.com/thedeveloperlad/links_channels/refs/heads/main/games_channels.m3u8"
-       m.save_feed_url.control = "RUN"
-       m.top.dialog.close = true
-       m.get_channel_list.control = "RUN"
-    else if m.top.dialog.buttonSelected = 8 ' Extra channels DEMO
-        m.global.feedurl = "https://raw.githubusercontent.com/angel200881/chann/refs/heads/main/DEMO.m3u8"
+    else if m.top.dialog.buttonSelected = 7 ' Extra channels DEMO
+        m.global.feedurl = "https://raw.githubusercontent.com/thedeveloperlad/links_channels/refs/heads/main/backup_channels_latino.m3u8"
        m.save_feed_url.control = "RUN"
        m.top.dialog.close = true
        m.get_channel_list.control = "RUN"
