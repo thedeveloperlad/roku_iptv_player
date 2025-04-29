@@ -145,7 +145,7 @@ sub onKeyPress()
        m.top.dialog.close = true
        m.get_channel_list.control = "RUN"
     else if m.top.dialog.buttonSelected = 6 ' Peliculas en Audio Latino
-        m.global.feedurl = "https://raw.githubusercontent.com/thedeveloperlad/links_channels/refs/heads/main/extra_channels.m3u8"
+        m.global.feedurl = "https://raw.githubusercontent.com/thedeveloperlad/links_channels/refs/heads/main/peliculas_dual_audio_lista.m3u8"
        m.save_feed_url.control = "RUN"
        m.top.dialog.close = true
        m.get_channel_list.control = "RUN"

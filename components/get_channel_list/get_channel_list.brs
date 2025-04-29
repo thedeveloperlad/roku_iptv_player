@@ -76,9 +76,9 @@ sub getContent()
 			if length < 0 then length = 0
 			title = maExtinf[2]
 			inExtinf = True
-			if reLogo.isMatch(line)
-				icon = reLogo.Match(line)[1]
-			end if
+			'if reLogo.isMatch(line)
+			'	icon = reLogo.Match(line)[1]
+			'end if
 		end if
 	end for
 
